@@ -43,7 +43,7 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 // camera.position.setZ(30);
 
-renderer.render(scene, camera);
+// renderer.render(scene, camera);
 
 // Shape of the object
 // const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
@@ -58,7 +58,7 @@ renderer.render(scene, camera);
 // const torus = new THREE.Mesh(geometry, material);
 
 // DONUT
-const donutTexture = new THREE.TextureLoader().load('./bmw.jpg')
+const donutTexture = new THREE.TextureLoader().load('bmw.jpg')
 
 const torus = new THREE.Mesh(
   new THREE.TorusGeometry(10, 3, 16, 100),
@@ -106,13 +106,13 @@ Array(200).fill().forEach(addStar)
 
 
 // BACKGROUND IMAGE
-const spaceTexture = new THREE.TextureLoader().load('./space.jpg')
+const spaceTexture = new THREE.TextureLoader().load('space.jpg')
 scene.background = spaceTexture;
 // =====================================
 
 
 // Avatar
-const semirTexture = new THREE.TextureLoader().load('./semir.png')
+const semirTexture = new THREE.TextureLoader().load('semir.png')
 
 const semir = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
@@ -123,8 +123,8 @@ scene.add(semir)
 // ==========================
 
 // MOON
-const moonTexture = new THREE.TextureLoader().load('./moon.jpg')
-const normalTexture = new THREE.TextureLoader().load('./normal.jpg')
+const moonTexture = new THREE.TextureLoader().load('moon.jpg')
+const normalTexture = new THREE.TextureLoader().load('normal.jpg')
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -141,7 +141,7 @@ const moon = new THREE.Mesh(
   moon.position.setX(-10)
   // =================================
 
-  // CAR
+/*   // CAR
   function createWheels() {
     const geometry = new THREE.BoxBufferGeometry(1, 1, 3);
     const material = new THREE.MeshLambertMaterial({ color: 0x333333 });
@@ -185,7 +185,7 @@ const moon = new THREE.Mesh(
 
    car.position.z = 30;
    car.position.setX(10);
-   car.position.y = -15;
+   car.position.y = -15; */
 
 
 // MOVE CAMERA WITH SCROLLING

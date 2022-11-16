@@ -2,35 +2,13 @@
 
 html {
   background-color: #000;
+    overflow-x: hidden !important;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   background-color: #000;
 }
-
-/* .preloader {
-  display: flex;
-  align-items: center;
-  background: #000;
-  height: 100vh;
-  justify-content: center;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  transition: opacity 0.2s linear;
-  z-index: 9999;
-  opacity: 1;
-  transform: opacity 1s linear;
-} */
-
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
 
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
@@ -80,6 +58,14 @@ header {
   margin-bottom: var(--spacing);
 }
 
+@media screen and (max-width: 767px) {
+  header {
+    /* background-color: transparent; */
+      grid-column: 2 / span 9;
+    font-size: 1.5rem;
+  }
+}
+
 section {
   grid-column: 2 / 8;
   padding: 2rem;
@@ -88,6 +74,25 @@ section {
   line-height: 1.5;
   margin-bottom: var(--spacing);
 }
+
+@media screen and (max-width: 767px) {
+  header {
+    /* background-color: transparent; */
+    grid-column: 2 / span 9;
+    font-size: 1.5rem;
+  }
+
+    section {
+      grid-column: 2 / 9;
+      padding: 2rem;
+      background: var(--dark-bg);
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: var(--spacing);
+    }
+}
+
+
 
 blockquote {
   margin: 0;
