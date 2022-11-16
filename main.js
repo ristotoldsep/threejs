@@ -15,9 +15,9 @@ const fadeOutEffect = setInterval(() => {
   if (preloader.style.opacity > 0) {
     preloader.style.opacity -= 0.1;
   } else {
-    clearInterval(fadeEffect);
+    clearInterval(fadeOutEffect);
   }
-}, 100);
+}, 200);
 
 
 // window.addEventListener("load", fadeOutEffect);
